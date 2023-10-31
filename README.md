@@ -1,4 +1,4 @@
-# Master-en-JavaScript-
+# Master-en-JavaScript
 
 Máster en JavaScript, en el que aprenderemos todo lo necesario para dominar el lenguaje de programación más popular que existe actualmente y todas las tecnologías a su alrededor con más demanda laboral y más proyección de futuro.
 
