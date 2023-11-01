@@ -70,6 +70,6 @@ if(pos && pos != -1){
     document.write("<h1> ENCONTRADO! </h1>");
     document.write("<h2>El numero "+ num_toSearch +" esta en la posicion "+ pos +"</h2>");
 }else{
-    document.write("<h1>"+ num_toSearch + "NO encontrado! </h1></br>");
+    document.write("<h1>, "+ num_toSearch + "NO encontrado! </h1></br>");
 }
 document.write("</hr>");
