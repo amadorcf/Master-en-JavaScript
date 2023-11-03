@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio practico DOM, EVENTOS y FUNCIONES</title>
+    <script type="text/javascript" src="js/32-ejercicio-dom.js"></script>
+
+    <style>
+      .box {
+        width: 250px;
+        height: 250px;
+        float: left;
+        margin: 20px;
+      }
+
+      .dashed {
+        border: 3px dashed gray;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Curso JavaScript</h1>
+    <h2>Ejercicio practico DOM, EVENTOS y FUNCIONES</h2>
+    <hr />
+
+    <!-- Formulario -->
+    <div class="box">
+      <form action="#" method="POST" id="form" onsubmit="return false">
+        <label for="name"
+          >Name: <input type="text" name="name" id="field_name" /></label
+        ><br />
+        <label for="surname"
+          >Surname:
+          <input type="text" name="surname" id="field_surname" /></label
+        ><br />
+        <label for="age"
+          >Age: <input type="text" name="age" id="field_age" /></label
+        ><br />
+
+        <!-- Boton ENVIAR FORMULARIO -->
+
+        <input type="submit" value="Sent form" id="submit" />
+      </form>
+    </div>
+
+    <!-- Mostrar datos por pantalla -->
+
+    <div class="box dashed">
+      <h3>
+        Informacion del usuario:
+        <hr />
+      </h3>
+    </div>
+
+    <!-- Scripts -->
+  </body>
+</html>
