@@ -33,7 +33,7 @@ window.addEventListener('load', function(){
         }
 
 
-        box_dashed.style.display = "block";
+        box_dashed.style.display = "inline";
 
         console.log(
             name,
@@ -44,14 +44,24 @@ window.addEventListener('load', function(){
         var titles = ["name", "surname", "age"];
         var datos = [name, surname, age];
 
+        /*
         for(var d in datos){
             var parrafo = document.createElement("p");
             parrafo.append(titles[d],": ",datos[d]);
 
             box_dashed.append(parrafo);
+        }*/
+
+        var datos2 = { nombre: name, apellidos: surname, edad: age,};
+
+        for(var [k,v] of Object.entries(datos2)){
+            var parrafo = document.createElement("p");
+            parrafo.append(`${k}: ${v}`);
+
+            box_dashed.append(parrafo);
         }
 
-        
+ 
 
     });
 
