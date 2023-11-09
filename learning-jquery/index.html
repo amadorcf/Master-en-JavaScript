@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Aprendiendo jQuery</title>
     
-    <script type="text/javascript" src="..\node_modules\jquery\dist\jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 
     <!-- Para saber si esta funcionando jQuery -->
     <script>
@@ -13,6 +13,8 @@
         });
     </script>
 
+    <script type="text/javascript" src="js/01-selectores.js"></script>
+
     <style>
       .center {
         border: 5px solid;
@@ -20,23 +22,39 @@
         width: 50%;
         padding: 10px;
       }
+      .zebra{
+        border: 5px dashed black;
+      }
+
+      .big{
+        font-size: 30px;
+      }
+      .mar-sup{
+        display: block;
+        margin-top: 45px;
+      }
     </style>
   </head>
 
   <body>
-    <div class="header center">
+    <div id="box" class="header center">
       <h1>Curso JavaScript</h1>
       <h2>Aprendiendo Jquery</h2>
-      <p>Informacion</p>
-      <p>
+      <p id="rojo" class="zebra">Informacion</p>
+      <p id="amarillo">
         jQuery se utiliza ampliamente en el desarrollo web para mejorar la interacción y la experiencia del usuario. Es compatible con múltiples navegadores y es utilizado por una gran cantidad de sitios web populares. Puedes usar jQuery en proyectos personales, sitios web comerciales, aplicaciones web y mucho más. También se utiliza en el desarrollo de aplicaciones móviles híbridas utilizando frameworks como PhoneGap o Ionic.
         
-      <p>En resumen, jQuery es una biblioteca de JavaScript que simplifica la manipulación de documentos HTML, el manejo de eventos y la animación en el desarrollo web. Se utiliza para mejorar la interactividad y la experiencia del usuario en sitios web y aplicaciones web.</p>
+      <p id="verde" class="zebra">En resumen, jQuery es una biblioteca de JavaScript que simplifica la manipulación de documentos HTML, el manejo de eventos y la animación en el desarrollo web. Se utiliza para mejorar la interactividad y la experiencia del usuario en sitios web y aplicaciones web.</p>
         
       <p><strong>En la actualidad aun se usa en numerosos proyectos, aunque sobre todo en proyectos monoliticos, donde el FRONT y el BACK no estan separados.</strong></p>
     </div>
     <hr />
 
+    <ul>
+      <li><a href="https://www.google.com/" title="google">Ir a Google</a></li>
+      <li><a href="https://www.bing.com/?setlang=es" title="bing">Ir a Bing</a></li>
+      <li><a href="https://es.search.yahoo.com/?fr2=p:fprd,mkt:es" title="yahoo">Ir a Yahoo</a></li>
+    </ul>
 
 
     <!-- Scripts -->
