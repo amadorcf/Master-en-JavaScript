@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aprendiendo jQuery - PETICIONES AJAX</title>
+    
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+
+    <script type="text/javascript" src="js/05-ajax.js"></script>
+
+
+    <style>
+      .center {
+        border: 5px solid;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
+
+      #datos{
+            width: 1000px;
+            border: 3px dashed black;
+            text-align: center;
+            font-size: 20px;
+            font-family: Verdana;
+            margin: 5px;
+
+            line-height: 100px;
+            vertical-align: middle;
+            overflow: scroll;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="caja" class="header center">
+      <h1>Curso JavaScript</h1>
+      <h2>Aprendiendo jQuery - PETICIONES AJAX</h2>
+    </div>
+    <hr />
+
+
+    <div>
+      <form action="https://reqres.in/api/users" method="POST" id="form">
+        NOMBRE: <input type="text" name="name">
+        web: <input type="text" name="web">
+        <br>
+        <input type="submit" value="Registrar">
+      </form>
+    </div>
+    <br>
+    <div id="datos"> </div>
+    
+
+  </body>
+
+</html>

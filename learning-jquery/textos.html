@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aprendiendo jQuery - EFECTOS, ANIMACIONES Y OTROS</title>
+    
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+
+    <script type="text/javascript" src="js/03-textos.js"></script>
+    <script type="text/javascript" src="js/04-efectos.js"></script>
+
+    <style>
+      .center {
+        border: 5px solid;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
+
+      #box{
+            width: 250px;
+            border: 3px dashed black;
+            text-align: center;
+            font-size: 20px;
+            font-family: Verdana;
+            margin: 5px;
+
+            line-height: 100px;
+            vertical-align: middle;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="caja" class="header center">
+      <h1>Curso JavaScript</h1>
+      <h2>Aprendiendo jQuery - EFECTOS, ANIMACIONES Y OTROS</h2>
+    </div>
+    <hr />
+
+    <h3>AÑADIR NUEVOS ENLACES</h3>
+        <input type="text" id="add_link"><button id="add_button" disabled="true">Add</button>
+
+    <ul id="menu">
+        <li><a href="https://www.google.com/" title="google">Ir a Google</a></li>
+        <li><a href="https://www.bing.com/?setlang=es" title="bing">Ir a Bing</a></li>
+        <li><a href="https://es.search.yahoo.com/?fr2=p:fprd,mkt:es" title="yahoo">Ir a Yahoo</a></li>
+    </ul>
+    
+    <hr>
+
+    <button id="todo">OPEN</button>
+    <button id="mostrar">Mostrar</button>
+    <button id="ocultar">Ocultar</button>
+    <button id="animar">Animar</button>
+
+    <br><br>
+
+    <div id="box">
+        La caja
+    </div>
+    
+    <!-- Scripts -->
+  </body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aprendiendo jQuery - EVENTOS</title>
+    
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- Para saber si esta funcionando jQuery 
+    <script>
+        $(document).ready(function(){
+            console.log("jQuery y la web cargados ... ");
+        });
+    </script>
+    -->
+
+    <script type="text/javascript" src="js/02-eventos.js"></script>
+
+    <style>
+      .center {
+        border: 5px solid;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
+
+      #caja{
+        width: 250px;
+        height: 250px;
+        border: 2px solid black;
+        border-radius: 2px;
+        background: yellow;
+        transition: 300ms all;
+      }
+
+      /*
+      #caja:hover{
+        background: cyan;
+        cursor: pointer;
+      }
+      */
+
+      input{
+        padding: 5px;
+        font-size: 20px;
+      }
+
+      #datos{
+        width: 250px;
+        height: 50px;
+        border: 4px dashed black;
+        border-radius: 3px;
+        display: none;
+        font-size: 20px;
+      }
+    
+      #sigueme{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        display: block;
+        background: yellow;
+        opacity: 0.5;
+        border: 1px solid black;
+        border-radius: 999px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="box" class="header center">
+      <h1>Curso JavaScript</h1>
+      <h2>Aprendiendo jQuery - EVENTOS</h2>
+    </div>
+    <hr />
+
+    <form action="" class="center">
+      <input type="text" id="nombre" >
+    </form>
+
+    <br>
+
+    <div id="datos" class="center">
+      
+    </div>
+
+    <br>
+
+    <div id="caja" class="">
+      <p>Esto es una caja</p>
+    </div>
+
+    <div id="sigueme" class="">
+    </div>
+    
+    <!-- Scripts -->
+  </body>
+</html>
