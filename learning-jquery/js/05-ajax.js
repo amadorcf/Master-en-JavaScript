@@ -51,8 +51,8 @@ $(document).ready(function(){
         error: function(){
             console.log("ERROR!")
         },
-        timeout:1000,
-    });
+        timeout:2000,
+        });
     });
 
 
