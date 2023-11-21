@@ -4,11 +4,6 @@
     <meta charset="utf-8" />
     <title>Aprendiendo jQuery - jQUERY UI - Interface</title>
     
-    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
-
-    <script type="text/javascript" src="js/03-textos.js"></script>
-    <script type="text/javascript" src="js/04-efectos.js"></script>
-
     <style>
       .center {
         border: 5px solid;
@@ -29,22 +24,158 @@
             vertical-align: middle;
       }
 
+      .elemento{
+        width: 250px;
+        height: 250px;
+        border: 4px solid black;
+        background: rgb(173, 230, 197);
+        margin: 20px;
+        float: left ;
+        padding: 5px;
+      }
+
+      .lista-seleccionable li{
+        width: 80%;
+        padding: 5px;
+        list-style: none;
+        cursor: pointer;
+      }
+
+      .lista-sortable li{
+        width: 80%;
+        padding: 5px;
+        list-style: none;
+        cursor: pointer;
+      }
+
+      ul .ui-selecting{background: lightcyan;}
+      ul .ui-selected{background: lightseagreen;}
+
+      #ele1{
+        width: 150px;
+        height: 150px;
+      }
+
+      .caja-efectos{
+        background: lightgoldenrodyellow;
+        display: none;
+        float: none;
+      }
+
     </style>
+
+    <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.theme.css">
+
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/06-interface.js"></script>
+
+
+
   </head>
 
   <body>
-    <div id="caja" class="header center">
+    <div class="header center">
       <h1>Curso JavaScript</h1>
       <h2>Aprendiendo jQuery - jQUERY UI - Interface</h2>
+      <p>Mas info en... : <a href="https://jqueryui.com/draggable/">https://jqueryui.com/draggable/</a></p>
     </div>
     <hr />
 
+    <button id="show">Mostrar</button>
+    <div class="caja-efectos elemento">
+      <h3>EFECTOS: </h3>
+      <p>Blind, Slice, Explode, Scale, Fold </p>
+      <hr>
+      <h3>Widgets</h3>
+      <a href="#" id="tooltip" title="Esto es lo que aparece con el efecto Tooltip">Tooltip</a>
+    </div>
+      
+    <hr>
 
-    <div id="box">
-
+    <div id="ele1" class="elemento">
+      <h3>Draggable</h3>
+      <p>Mover elementos por la pagina</p>
     </div>
     
+    <div id="ele2" class="elemento">
+      <h3>Droppable</h3>
+      <p>Habilite cualquier elemento DOM para que se pueda soltar, un destino para elementos que se pueden arrastrar.</p>
+    </div>
+
+    <div id="ele3" class="elemento">
+      <h3>Resizable</h3>
+      <p>Redimensionar elementos de la pagina</p>
+    </div>
+
+    <div id="ele4" class="elemento">
+      <h3>Selectable - Sortable</h3>
+      <p>Seleccionar elementos</p>
+      <hr>
+      <ul class="lista-seleccionable">
+        <li>JavaScript</li>
+        <li>PYTHON</li>
+        <li>C++</li>
+        <li>PHP</li>
+      </ul>
+    </div>
+
+    <div id="ele5" class="elemento">
+      <h3>Sortable</h3>
+      <p>Ordenar elementos</p>
+      <hr>
+      <ul class="lista-sortable">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+		<h3>Cuadros de dialogo (popup's)</h3>
+		<button id="lanzar-popup">Lanzame</button>
+		<div id="popup" title="¿Estas seguro?" style="display:none">
+			<p>
+				Si continuas en el curso aprenderas mucho de javascript inevitablemente
+			</p>
+		</div>
+
+
+		<hr/>
+
+
+		<h3>Calendario</h3>
+		<input type="text" id="calendario" />
+
+
+		<hr/>
+
+		<h3>Pestañas</h3>
+		<div id="pestanas">
+			<ul>
+				<li><a href="#tabs-1">Pestaña 1</a></li>
+				<li><a href="#tabs-2">Pestaña 2</a></li>
+				<li><a href="#tabs-3">Pestaña 3</a></li>
+			</ul>
+			<div id="tabs-1">
+				Hola soy la primera pestaña
+			</div>
+			<div id="tabs-2">
+				Hola soy la segunda pestaña
+			</div>
+			<div id="tabs-3">
+				Hola soy la TERCERA pestaña
+			</div>
+		</div>
+
+		<hr/>
+
     <!-- Scripts -->
+
   </body>
 
 </html>
