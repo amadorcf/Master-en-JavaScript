@@ -7,6 +7,19 @@
 
         <!-- Estilos CSS-->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+        <!-- jQUERY -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+        <!-- SLIDER -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+        <!-- Moment JS para formato de fechas -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js"></script>
+        <!-- SCRITS -->
+        <script type="text/javascript" src="js/main.js"></script>
     </head>
 
     <body>
@@ -34,30 +47,44 @@
             <hr>
 
             <!-- SLIDER -->
-            <div id="slider">
-                
+            <div class="slider">
+                <div class="bxslider">
+                    <div><img src="img/bg-green.jpg" title="verde" /></div>
+                    <div><img src="img/bg-red.jpg" title="rojo" /></div>
+                    <div><img src="img/bg-blue.jpg" title="azul" /></div>
+                </div>
             </div>
 
             <!-- CONTENIDO -->
             <section id="content">
                 <div id="posts">
-                    <article class="post">
-                        <h2>Article title</h2>
-                        <span class="date">Public date</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate id diam non
-                            efficitur. Sed suscipit nunc vel eros elementum, non feugiat erat lobortis. Phasellus sit amet
-                            pulvinar enim. Vivamus dapibus enim id urna maximus, ac tincidunt enim faucibus. Duis vel
-                            molestie magna. Duis in tortor malesuada mauris pharetra viverra. Vestibulum feugiat velit est,
-                            ac condimentum orci pharetra ac. Nunc mattis imperdiet dui non sollicitudin.
-                        </p>
-                        <a href="#" class="button-more">Read more...</a>
-                    </article>
+                    <!--Carga de posts desde JSON-->
                 </div>
-                <sidebar id="sidebar">
 
-                </sidebar>
-                
+
+                <aside id="sidebar">
+                    <div id="about">
+                        <h4><span>Who I am?</span></h4>
+                        <img src="img\blackSAD_T.png" alt="">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                    
+                    <div id="login">
+                        <h4><span>Login</span></h4>
+                        <form>
+                            <label for="email">Email</label>
+                            <input type="email" name="email">
+
+                            <label for="password">Password</label>
+                            <input type="password" name="password">
+
+                            <input type="submit" value="Save">
+                        </form>
+                    </div>
+                </aside>
+
                 <div class="clearfix"></div>
 
             </section>
@@ -65,10 +92,8 @@
 
         </section>
 
-        <hr>
-
         <footer>
-            Final project JS - Amador Cano
+            Final project JS - ©Amador Cano
         </footer>
 
     </body>

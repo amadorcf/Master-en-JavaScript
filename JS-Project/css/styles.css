@@ -13,16 +13,12 @@ body{
     background-attachment: fixed;
 }
 
-footer{
-    margin: 20px;
-    text-align: center;
-}
 
 #global{
     width: 65%;
     margin: 0px auto;
     margin-top: 30px;
-    padding: 20px;
+    padding: 25px;
     background: white;
     box-shadow: 0px 0px 2px #ccc;
 }
@@ -107,4 +103,99 @@ footer{
     margin-bottom: 20px;
     font-size: 15px;
     text-align: center;
+}
+
+#about{
+    margin-top: 30px;
+    border: solid 1px #ccc;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#sidebar{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 30%;
+    float: right;
+    padding-right: 10px;
+}
+
+#sidebar h4{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 10px;
+    text-align: center;
+    background: url("../img/lines.png") repeat-x;
+}
+
+#sidebar h4 span{
+    background: white;
+    padding: 10px;
+}
+
+#sidebar img{
+    width: 100%;
+}
+
+#sidebar p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+#login{
+    margin-top: 30px;
+    border: solid 1px #ccc;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+form{
+    margin: 10px;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"]{
+    height: 25px;
+    border-radius: 2px;
+    border: solid 1px #ccc;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 2px #ccc;
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form input[type="submit"]{
+    padding: 10px;
+    background-color: #235E3D;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+
+}
+
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    height: 50px;
+    background: rgba(51, 51, 51, 0.70);
+    margin: 0px auto;
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.bx-wraper, .bx-viewport{
+    height: 250px !important;
 }
