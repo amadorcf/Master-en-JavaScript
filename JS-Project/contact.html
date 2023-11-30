@@ -11,19 +11,20 @@
 
         <!-- jQUERY -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.css">
         <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
 
-        <!-- SLIDER -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+         <!-- PLUGIN VALIDACION -->
+         <!-- si queremos cargar el archivo localmente
+            <script type="text/javascript" src="js/jquery-ui/jquery.form-validator.min.js"></script> --> 
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
-        <!-- Moment JS para formato de fechas -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js"></script>
         
         <!-- SCRITS -->
         <script type="text/javascript" src="js/main.js"></script>
-
+        
 
     </head>
 
@@ -57,19 +58,31 @@
 
             <hr>
 
-            <!-- SLIDER -->
-            <div class="slider">
-                <div class="bxslider">
-                    <div><img src="img/bg-green.jpg" title="verde" /></div>
-                    <div><img src="img/bg-red.jpg" title="rojo" /></div>
-                    <div><img src="img/bg-blue.jpg" title="azul" /></div>
-                </div>
-            </div>
 
             <!-- CONTENIDO -->
             <section id="content">
-                <div id="posts">
-                    <!--Carga de posts desde JSON-->
+                <div id="box">
+                    <!--Cargar acordeon-->
+                    <h2>CONTACT</h2>
+                    <form id="form-contact" action="" method="POST">
+                        <label for="fname">First Name</label>
+                        <input data-validation="alphanumeric" type="text" id="fname" name="firstname" placeholder="Your name..">
+                    
+                        <label for="lname">Last Name</label>
+                        <input data-validation="alphanumeric" type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    
+                        <label for="country">Genre</label>
+                        <select data-validation="required" id="genre" name="genre">
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                    
+                        <label for="subject">Subject</label>
+                        <textarea data-validation="required" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    
+                        <input type="submit" value="Sent">
+                    </form>
+
                 </div>
 
 
@@ -97,13 +110,7 @@
                 </aside>
 
                 <div class="clearfix"></div>
-                <div id="up-button">
-                    <a href="#" class="subir">
-                        <img src="img/subir.png" title="Ir arriba">
-                        Ir arriba
-                        <img src="img/subir.png" title="Ir arriba">
-                    </a>
-                </div>
+
                 
             </section>
 
