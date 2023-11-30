@@ -11,19 +11,14 @@
 
         <!-- jQUERY -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.css">
         <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-
-        <!-- SLIDER -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-        <!-- Moment JS para formato de fechas -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js"></script>
         
         <!-- SCRITS -->
         <script type="text/javascript" src="js/main.js"></script>
-
+        
 
     </head>
 
@@ -57,19 +52,34 @@
 
             <hr>
 
-            <!-- SLIDER -->
-            <div class="slider">
-                <div class="bxslider">
-                    <div><img src="img/bg-green.jpg" title="verde" /></div>
-                    <div><img src="img/bg-red.jpg" title="rojo" /></div>
-                    <div><img src="img/bg-blue.jpg" title="azul" /></div>
-                </div>
-            </div>
 
             <!-- CONTENIDO -->
             <section id="content">
-                <div id="posts">
-                    <!--Carga de posts desde JSON-->
+                <div id="box">
+                    <!--Cargar acordeon-->
+                    <h2>ABOUT ME</h2>
+                    <div id="acordeon">
+                        <h3>¿Quien soy?</h3>
+                        <div>
+                            <p>
+                                Pellentesque vel magna vitae massa tempor luctus in et eros. Cras sodales vitae justo eu scelerisque. Pellentesque pulvinar orci condimentum, sagittis orci eu, ultrices tortor. Nulla non dolor sed lectus placerat hendrerit eget at arcu. Sed vestibulum luctus pretium. Vestibulum at massa in risus rutrum euismod.
+                            </p>
+                        </div>
+
+                        <h3>Servicios</h3>
+                        <div>
+                            <p>
+                                Pellentesque vel magna vitae massa tempor luctus in et eros. Cras sodales vitae justo eu scelerisque. Pellentesque pulvinar orci condimentum, sagittis orci eu, ultrices tortor. Nulla non dolor sed lectus placerat hendrerit eget at arcu. Sed vestibulum luctus pretium. Vestibulum at massa in risus rutrum euismod.
+                            </p>
+                        </div>
+
+                        <h3>Clientes</h3>
+                        <div>
+                            <p>
+                                Pellentesque vel magna vitae massa tempor luctus in et eros. Cras sodales vitae justo eu scelerisque. Pellentesque pulvinar orci condimentum, sagittis orci eu, ultrices tortor. Nulla non dolor sed lectus placerat hendrerit eget at arcu. Sed vestibulum luctus pretium. Vestibulum at massa in risus rutrum euismod.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -97,13 +107,7 @@
                 </aside>
 
                 <div class="clearfix"></div>
-                <div id="up-button">
-                    <a href="#" class="subir">
-                        <img src="img/subir.png" title="Ir arriba">
-                        Ir arriba
-                        <img src="img/subir.png" title="Ir arriba">
-                    </a>
-                </div>
+
                 
             </section>
 

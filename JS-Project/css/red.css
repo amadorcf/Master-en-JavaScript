@@ -1,0 +1,51 @@
+body{
+    background: url("../img/bg-red.jpg");
+    background-attachment: fixed;
+}
+
+#global{
+
+    background: white;
+
+}
+
+#logo{
+
+    background: #CA3413;
+
+}
+
+#menu{
+
+    background: #333;
+
+}
+
+#menu li:hover{
+    background: #CA3413;
+}
+
+.button-more{
+
+    background: #CA3413;
+
+}
+
+#sidebar h4{
+
+    background: url("../img/lines.png") repeat-x;
+}
+
+#sidebar h4 span{
+    background: white;
+    padding: 10px;
+}
+
+form input[type="submit"]{
+    background-color: #CA3413;
+
+}
+
+footer{
+    background: rgba(51, 51, 51, 0.70);
+}

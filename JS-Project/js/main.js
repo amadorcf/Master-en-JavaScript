@@ -143,7 +143,7 @@ $(document).ready(function () {
   //reloj
   if(window.location.href.indexOf('clock') > -1){
     setInterval(function(){
-      var reloj = moment().format("hh:mm:ss");
+      var reloj = moment().format("HH:mm:ss");
       $("#reloj").html(reloj);
     }, 1000)
   }  
