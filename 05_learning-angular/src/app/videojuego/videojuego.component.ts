@@ -16,11 +16,14 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 export class VideojuegoComponent implements OnInit, DoCheck {
   public title: string;
   public list: string;
+  public original_title: string;
 
   constructor() {
-    this.title = 'Componente de Videojuegos';
+    this.title = 'Componente de categoria: Videojuegos';
     this.list = 'Listado de juegos mas populares de PS4';
-    console.log('Componente Videojuegos cargado');
+    this.original_title =  this.title;
+    //console.log('Componente Videojuegos cargado');
+    //console.log("El titulo inicial es: ", this.original_title)
   }
 
 
@@ -28,12 +31,12 @@ export class VideojuegoComponent implements OnInit, DoCheck {
 
   // Se ejecuta al iniciar la app
   ngOnInit() {
-    console.log('OnInit ejecutado!');
+    //console.log('OnInit ejecutado!');
   }
 
   // Se ejecuta al hacer algun cambio en Angular
   ngDoCheck() {
-    console.log('DoCheck ejecutado!');
+    //console.log('DoCheck ejecutado!');
   }
 
   ngOnDestroy(): void {
@@ -44,5 +47,9 @@ export class VideojuegoComponent implements OnInit, DoCheck {
 
   cambiarTitulo() {
     this.title = 'Ahora el tiulo es este';
+  }
+
+  originalTitle() {
+    this.title = this.original_title;
   }
 }

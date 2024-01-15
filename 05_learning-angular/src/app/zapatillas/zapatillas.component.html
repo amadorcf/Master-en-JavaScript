@@ -1,1 +1,12 @@
-<p>zapatillas works!</p>
+<div>
+  <h2>{{ titulo }}</h2>
+  <p>Listado de zapatillas</p>
+
+
+  <ul>
+      <li *ngFor="let z of zapatillas">
+        {{z.nombre}} - <strong>{{z.precio}}</strong>
+      </li>
+  </ul>
+</div>
+
