@@ -1,5 +1,6 @@
+import { Zapatilla } from './../models/zapatilla';
 import { Component, OnInit } from '@angular/core';
-import { Zapatilla } from '../models/zapatilla';
+
 
 @Component({
   selector: 'app-zapatillas',
@@ -9,6 +10,7 @@ import { Zapatilla } from '../models/zapatilla';
 export class ZapatillasComponent implements OnInit{
     public titulo:string = "Componente de categoria: Zapatillas";
     public zapatillas: Array<Zapatilla>;
+    public marcas: String[];
 
     constructor(){
       this.zapatillas = [
@@ -21,11 +23,25 @@ export class ZapatillasComponent implements OnInit{
         //aqui podiamos crear mas zapatillas usando el patron de la linea anterior
 
       ];
+
+      this.marcas = new Array();
     }
 
     ngOnInit(){
         console.log(this.zapatillas);
+
+        this.getMarcas();
     }
 
+    getMarcas(){
+      this.zapatillas.forEach(((zapatilla, index) => {
+        if(this.marcas.indexOf(zapatilla.marca) < 0){
+          this.marcas.push(zapatilla.marca);
+          //console.log(index);
+        }
 
+      }));
+
+      console.log(this.marcas);
+    }
 }
