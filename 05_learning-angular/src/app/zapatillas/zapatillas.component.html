@@ -5,8 +5,14 @@
 
   <ul>
       <li *ngFor="let z of zapatillas">
-        {{z.nombre}} - <strong>{{z.precio}}</strong>
+        {{z.nombre}} - <strong>{{z.precio}}&ensp;</strong>
+        <span *ngIf="z.precio <=70" [ngStyle]="{'background': 'green'}">¡En oferta!     </span>
       </li>
+
+
+
+
+
   </ul>
 </div>
 
