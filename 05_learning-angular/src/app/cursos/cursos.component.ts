@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent {
+  public titulo:string = "Componente de categoria: Cursos";
+
+
+  constructor(){
+  }
 
 }

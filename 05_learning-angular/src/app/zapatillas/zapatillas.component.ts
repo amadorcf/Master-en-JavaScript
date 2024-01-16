@@ -11,6 +11,7 @@ export class ZapatillasComponent implements OnInit{
     public titulo:string = "Componente de categoria: Zapatillas";
     public zapatillas: Array<Zapatilla>;
     public marcas: String[];
+    public mi_marca: string;
 
     constructor(){
       this.zapatillas = [
@@ -25,6 +26,7 @@ export class ZapatillasComponent implements OnInit{
       ];
 
       this.marcas = new Array();
+      this.mi_marca = "";
     }
 
     ngOnInit(){
@@ -39,9 +41,22 @@ export class ZapatillasComponent implements OnInit{
           this.marcas.push(zapatilla.marca);
           //console.log(index);
         }
-
       }));
 
       console.log(this.marcas);
     }
+
+    getMiMarca(){
+      alert(this.mi_marca);
+    }
+
+    addMarca(){
+      this.marcas.push(this.mi_marca);
+    }
+
+    deleteMarca(index: number){
+      //delete this.marcas[index];
+      this.marcas.splice(index, 1);
+    }
+    
 }

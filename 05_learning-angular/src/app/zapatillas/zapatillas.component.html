@@ -1,10 +1,22 @@
 <div>
   <h2>{{ titulo }}</h2>
+
+  <p>Añadir marca</p>
+  <div>
+    <input type="text" [(ngModel)]="mi_marca"/>
+    <button (click)="getMiMarca()">Mostrar marca</button>
+    <button (click)="addMarca()">Agregar marca</button>
+  </div>
+
+  <strong><p>{{mi_marca}}</p></strong>
+
+
   <p>Las mejores marcas de zapatillas</p>
 
   <ul>
-    <li *ngFor="let marca of marcas" [ngStyle]="{'list-style': 'none'}">
-        <strong>{{marca}}</strong>
+    <li *ngFor="let marca of marcas; let indice = index" [ngStyle]="{'list-style': 'none'}">
+        <strong>{{indice + '-' + marca + '   '}}</strong>
+        <button (click)="deleteMarca(indice)">Borrar marca</button>
     </li>
   </ul>
 
