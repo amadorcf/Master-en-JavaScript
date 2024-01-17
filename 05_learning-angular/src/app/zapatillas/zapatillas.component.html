@@ -24,8 +24,9 @@
   <p>Listado de zapatillas</p>
 
   <ul>
-      <li *ngFor="let z of zapatillas">
-        {{z.nombre}} - <strong>{{z.precio}}&ensp;</strong>
+      <li *ngFor="let z of zapatillas" [ngClass]="{'fondoRojo': z.precio>100, 'subrayado': z.nombre =='Nike Air'}">
+
+        {{z.nombre}} - <strong [class.altoPrecio]="z.precio >= 80">{{z.precio}}€&ensp;</strong>
         <span *ngIf="z.precio <=70" [ngStyle]="{'background': 'green'}">¡En oferta!</span>
       </li>
   </ul>
