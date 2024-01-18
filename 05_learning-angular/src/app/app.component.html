@@ -2,6 +2,18 @@
     <h1>Bienvenido al proyecto final: {{ title }}</h1>
     <p>{{description}}</p>
 
+    <nav>
+      <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
+      &nbsp;
+      <a [routerLink]="['/videojuegos']" [routerLinkActive]="['active']">Videojuegos</a>
+      &nbsp;
+      <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>
+      &nbsp;
+      <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
+    </nav>
+
+    <hr>
+
     <!--
     <hr>
     <app-videojuego></app-videojuego>
@@ -12,6 +24,7 @@
     -->
 
     <!-- Directiva que se encarga del routing -->
+    
     <router-outlet></router-outlet>
 
 </div>
