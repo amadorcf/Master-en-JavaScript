@@ -1,5 +1,5 @@
 // Importar modulos del router de Angular
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // Importar componentes
@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
-
+import { ExternoComponent } from './externo/externo.component';
 
 // Array de rutas
 const appRoutes: Routes = [
@@ -17,6 +17,7 @@ const appRoutes: Routes = [
   {path:'cursos', component: CursosComponent},
   {path:'cursos/:nombre/', component: CursosComponent},
   {path:'cursos/:nombre/:followers', component: CursosComponent},
+  {path:'externo', component: ExternoComponent},
   {path: '**', component: HomeComponent}
 ];
 
