@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
 import { HttpClientModule } from '@angular/common/http'
 
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { HttpClientModule } from '@angular/common/http'
     ZapatillasComponent,
     CursosComponent,
     HomeComponent,
-    ExternoComponent
-  ],
+    ExternoComponent,
+    CalculadoraPipe
+    ],
   imports: [
     BrowserModule,
     FormsModule,

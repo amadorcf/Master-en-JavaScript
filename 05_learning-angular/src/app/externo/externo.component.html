@@ -1,4 +1,11 @@
+<!-- 'date' seria una directiva Pipe la cual se puede dar formato -->
+<!--https://angular.io/api/common/DatePipe -->
+<div>{{ fecha | date:"fullDate" | uppercase }}</div>
+<div>{{ fecha | date:"dd/MM/YYYY"}}</div>
 <br>
+<div>
+  {{ 88 | calculadora: 2 }}
+</div>
 <p>Introduce id de usuario: <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()"></p>
 <br>
 <div *ngIf="!user">

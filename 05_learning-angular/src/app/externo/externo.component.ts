@@ -12,12 +12,15 @@ export class ExternoComponent implements OnInit {
 
   public user: any;
   public userId: any;
+  public fecha: any;
 
   constructor(private _peticionesService: PeticionesService){
     this.userId = 1;
   }
 
   ngOnInit(){
+    this.fecha = new Date();
+
     this.cargaUsuario();
   }
 
@@ -26,7 +29,12 @@ export class ExternoComponent implements OnInit {
     this._peticionesService.getUser(this.userId).subscribe(
       result =>{
         this.user = result.data;
-        console.log(this.user);
+        if(this.userId == ''){
+          alert("Debe de haber al menos un digito")
+        }else{
+          console.log(this.user);
+        }
+
       }
     );
   }
