@@ -1,5 +1,6 @@
 import { Pipe,PipeTransform } from "@angular/core";
 
+// Crear nueva Pipe personalizada
 @Pipe({name:'calculadora'})
 export class CalculadoraPipe implements PipeTransform{
 
