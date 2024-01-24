@@ -1,5 +1,3 @@
-
-
 export var configuracion = {
   colour: "red",
   background: "blue",

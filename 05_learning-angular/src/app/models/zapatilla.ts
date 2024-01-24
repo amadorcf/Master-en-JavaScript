@@ -1,4 +1,5 @@
 export class Zapatilla{
+  
   /*
   public nombre:string;
   public marca:string;
@@ -11,6 +12,7 @@ export class Zapatilla{
     //...
   }
   */
+
   constructor( public nombre: string,
     public marca: string,
     public color: string,
