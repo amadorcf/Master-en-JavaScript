@@ -6,7 +6,7 @@ var port = 3700;
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/portfolio')
-    .then(() => {
+    .then( () => {
         console.log("Conectado correctamente a base de datos Portfolio en MongoDB")
 
         // Creacion del SERVIDOR
@@ -14,5 +14,7 @@ mongoose.connect('mongodb://localhost:27017/portfolio')
             console.log("Servidor corriendo correctamente en la url: localhost:3700")
         });
 
+    })
+    .catch((error) => {
+        console.error(error);
     });
-    //.catch(err => console.log(err));

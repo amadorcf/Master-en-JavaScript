@@ -20,10 +20,6 @@ app.use(bodyParser.json()); //Esto convierte todo lo que llegue a la url a forma
 
 // RUTAS
 app.get('/',(req, res) => {
-    console.log(req.body.nombre);
-    console.log(req.params.id);
-    console.log(req.query.web);
-
     res.status(200).send(
        "<h1>HOME</h1>"
     );
