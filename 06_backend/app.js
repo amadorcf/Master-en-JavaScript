@@ -11,35 +11,41 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // Cargar archivos de RUTAS
+var project_routes = require('./routes/project')
+
 
 //MIDDLEWARES: metodo que se ejecuta antes que la capa del controlador
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json()); //Esto convierte todo lo que llegue a la url a formato JSON
 
+app.use('/api',project_routes);
+
 //CORS
 
 // RUTAS
-app.get('/',(req, res) => {
-    res.status(200).send(
-       "<h1>HOME</h1>"
-    );
-});
-
-app.get('/test',(req, res) => {
-    res.status(200).send({
-        message: "Test superado"
+    /*
+    app.get('/',(req, res) => {
+        res.status(200).send(
+        "<h1>HOME</h1>"
+        );
     });
-});
 
-app.post('/test/:id', (req, res) => {
-    console.log("\n"+req.body.name);
-    console.log(req.params.id);
-    console.log(req.query.web);
-
-    res.status(200).send({
-        message: "Probando metodo POST"
+    app.get('/test',(req, res) => {
+        res.status(200).send({
+            message: "Test superado"
+        });
     });
-});
+
+    app.post('/test/:id', (req, res) => {
+        console.log("\n"+req.body.name);
+        console.log(req.params.id);
+        console.log(req.query.web);
+
+        res.status(200).send({
+            message: "Probando metodo POST"
+        });
+    });
+    */
 
 
 // EXPORTAR 
