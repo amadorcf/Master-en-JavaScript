@@ -109,10 +109,26 @@ var controller = {
         .catch(() => {
             return res.status(404).send({message: "Imposible actualizar. No se ha encontrado el proyecto"});
         })
-    }
+    },
 
     // DELETE
+    deleteProject: function(req, res){
+        var projectId = req.params.id;
 
+        // Si no existe proyecto...
+        if (projectId == null) return res.status(404).send({message: "El proyecto no existe"});
+
+        Project.findByIdAndDelete(projectId)
+        .then((projectRemoved)=>{
+            return res.status(200).send({
+                project: projectRemoved,
+                message: "Proyecto eliminado correctamente"
+            })
+        })
+        .catch(() => {
+            return res.status(404).send({message: "Imposible eliminar. No se ha encontrado el proyecto"});
+        })
+    }
 
 }
 
