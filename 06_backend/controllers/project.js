@@ -2,6 +2,7 @@
 
 // PRIMERO: IMPORTAR MODELOS
 var Project = require('../models/project')
+var fs = require('fs')
 
 // SEGUNDO: SE CREA CONTROLADOR CON SUS METODOS
 var controller = {
@@ -17,8 +18,7 @@ var controller = {
         })
     },
 
-    // CREAMOS EL CRUD
-
+    //// CREAMOS EL CRUD
     // CREATE
     saveProject: async function(req, res){
         var project = new Project();
@@ -106,7 +106,7 @@ var controller = {
                 project: projectUpdated
             })
         })
-        .catch(() => {
+        .catch((err) => {
             return res.status(404).send({message: "Imposible actualizar. No se ha encontrado el proyecto"});
         })
     },
@@ -125,11 +125,62 @@ var controller = {
                 message: "Proyecto eliminado correctamente"
             })
         })
-        .catch(() => {
-            return res.status(404).send({message: "Imposible eliminar. No se ha encontrado el proyecto"});
+        .catch((err) => {
+            return res.status(404).send({
+                error: err,
+                message: "Imposible eliminar. No se ha encontrado el proyecto"
+            });
         })
-    }
+    },
 
+
+    // Carga de imangenes o ficheros
+    // Es necesario el plugin connect-multiparty para poder subir archivos
+    // Hay que construir un middleware en el archivo de rutas
+    uploadImage: function(req, res){
+        var projectId = req.params.id;
+
+        // Si no existe proyecto...
+        if (projectId == null) return res.status(404).send({message: "El proyecto no existe"});
+
+        var fileName = 'Imagen no subida...';
+
+        if(req.files){
+            var filePath = req.files.image.path;
+            
+            var fileSplit = filePath.split('\\');
+            var fileName = fileSplit[1];
+            var extSplit = fileName.split('\.');
+            var fileExt = extSplit[1];
+            
+
+            // Comprobacion de extension
+            if(fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif'){
+                Project.findByIdAndUpdate(projectId, {image: fileName} ,{new:true})
+                .then((projectUpdated)=>{
+                    return res.status(200).send({
+                        project: projectUpdated
+                    })
+                })
+                .catch((err) => {
+                    return res.status(404).send({message: "Imposible cargar imagen. No se ha encontrado el proyecto"});
+                })
+            }else{
+                fs.unlink(filePath, (err)=>{return res.status(200).send({message:'La extension no es valida. No se guardará el archivo'})})
+            }
+
+
+
+
+
+        }else{
+            return res.status(200).send({
+                message: fileName
+            });
+        }
+
+
+    }
 }
 
 module.exports = controller;
