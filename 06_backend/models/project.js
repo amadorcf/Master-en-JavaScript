@@ -13,7 +13,7 @@ var ProjectSchema = Schema({
     description: String,
     category: String,
     year: Number,
-    lang: String,
+    langs: String,
     image: String
 });
 

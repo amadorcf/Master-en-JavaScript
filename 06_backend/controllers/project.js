@@ -18,7 +18,7 @@ var controller = {
         })
     },
 
-    //// CREAMOS EL CRUD
+    //// Creamos el sistema CRUD
     // CREATE
     saveProject: async function(req, res){
         var project = new Project();
